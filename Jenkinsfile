@@ -9,10 +9,10 @@ pipeline {
 		}
         stage('deploy to S3'){
             steps{
-                bat 'aws s3 cp public/index.html s3://jenkinstoawsdeployment'
-                bat 'aws s3api put-object-acl --bucket jenkinstoawsdeployment --key index.html --acl public-read'
-                bat 'aws s3 cp public/error.html s3://jenkinstoawsdeployment'
-                bat 'aws s3api put-object-acl --bucket jenkinstoawsdeployment --key error.html --acl public-read'
+                bat 'C:/"Program Files"/Amazon/AWSCLIV2/aws s3 cp public/index.html s3://jenkinstoawsdeployment'
+                bat 'C:/"Program Files"/Amazon/AWSCLIV2/aws s3api put-object-acl --bucket jenkinstoawsdeployment --key index.html --acl public-read'
+                bat 'C:/"Program Files"/Amazon/AWSCLIV2/aws s3 cp public/error.html s3://jenkinstoawsdeployment'
+                bat 'C:/"Program Files"/Amazon/AWSCLIV2/aws s3api put-object-acl --bucket jenkinstoawsdeployment --key error.html --acl public-read'
             }
         }
     }
